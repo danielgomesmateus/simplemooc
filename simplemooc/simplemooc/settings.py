@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'simplemooc.core',
     'simplemooc.courses',
-    'simplemooc.accounts' 
+    'simplemooc.accounts'
 ]
 
 MIDDLEWARE = [
@@ -140,3 +140,4 @@ CONTACT_EMAIL = 'contato@simplemooc.com'
 LOGIN_URL = 'accounts:login'
 LOGOUT_URL = 'accounts:logout'
 LOGIN_REDIRECT_URL = 'core:home'
+AUTH_USER_MODEL = 'accounts.User'
