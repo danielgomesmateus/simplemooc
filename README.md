@@ -25,7 +25,6 @@ Após clonar o repositório, basta na pasta do projeto, iniciar o ambiente com V
 comandos abaixo para criar as tabelas do banco de dados e iniciar o servidor.
 
 ```
-python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```

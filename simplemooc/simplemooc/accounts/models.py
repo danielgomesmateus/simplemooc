@@ -3,6 +3,7 @@ from django.db import models
 from django.core import validators
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, UserManager
 from django.conf import settings
+from simplemooc.core.utils import generate_hash_key
 
 class User(AbstractBaseUser, PermissionsMixin):
 
@@ -72,8 +73,8 @@ class PasswordReset(models.Model):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         verbose_name = 'Usuário',
-        on_delete = models.CASCADE
-        #related_name = 'resets'
+        on_delete = models.CASCADE,
+        related_name = 'resets'
     )
 
     key = models.CharField(

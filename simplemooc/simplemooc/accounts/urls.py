@@ -6,8 +6,8 @@ app_name = 'accounts'
 
 urlpatterns = [
 	path(
-		'login/', 
-		auth_views.login, 
+		'login/',
+		auth_views.login,
 		{'template_name': 'accounts/login.html'},
 		name = 'login'
 	),
@@ -36,5 +36,10 @@ urlpatterns = [
 		'edit/password',
 		views.edit_password,
 		name = 'edit_password'
+	),
+	path(
+		'password-reset',
+		views.password_reset,
+		name = 'password_reset'
 	)
 ]
